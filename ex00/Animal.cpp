@@ -6,7 +6,7 @@
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 16:11:06 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/05/02 17:03:39 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:19:36 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,14 @@ Animal::Animal( std::string name )
 Animal::~Animal( void )
 {
 	std::cout << "Animal destructor called" << std::endl;
+}
+
+std::string Animal::getType() const
+{
+	return(this->type);
+}
+
+void Animal::makeSound() const
+{
+	
 }

@@ -6,7 +6,7 @@
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 15:22:01 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/05/02 16:07:30 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:23:40 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,19 @@
 
 # include <string>
 # include <iostream>
+# include "Animal.hpp"
 
-class Dog : public Animal {
-    protected :
+class Dog : public Animal
+{
+    private :
+    
     public :
         Dog( void );
         Dog& operator=(const Dog &copy);
-        Dog( std::string name );
         Dog(const Dog &copy);
+        void makeSound() const;
         ~Dog( void );
-}
+};
+
 #endif
 

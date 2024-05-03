@@ -6,15 +6,16 @@
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 15:22:23 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/05/02 17:19:04 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:25:36 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Cat.hpp"
 
 Cat::Cat  ( void ) : Animal()
 {
     std::cout << "Cat constructor called" << std::endl;
+	this->type = "Cat";
 }
 
 Cat& Cat::operator=(const Cat &copy)
@@ -29,13 +30,12 @@ Cat::Cat(const Cat &copy) : Animal(copy)
 	*this = copy;
 }
 
-Cat::Cat( std::string name ) : Animal(name)
-{
-    std::cout << "Cat name constructor called" << std::endl;
-    this->type = name;
-}
-
 Cat::~Cat( void )
 {
 	std::cout << "Cat destructor called" << std::endl;
+}
+
+void Cat::makeSound() const
+{
+	std::cout << "MIAOU" << std::endl;
 }

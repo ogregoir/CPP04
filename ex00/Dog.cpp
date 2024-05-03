@@ -6,15 +6,16 @@
 /*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 15:22:14 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/05/02 17:09:10 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:20:26 by ogregoir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 
 Dog::Dog  ( void )
 {
     std::cout << "Dog constructor called" << std::endl;
+	this->type = "Dog";
 }
 
 Dog& Dog::operator=(const Dog &copy)
@@ -29,10 +30,9 @@ Dog::Dog(const Dog &copy)
 	*this = copy;
 }
 
-Dog::Dog( std::string name )
+void Dog::makeSound() const
 {
-    std::cout << "Dog name constructor called" << std::endl;
-    this->type = name;
+	std::cout << "WOOOAF" << std::endl;
 }
 
 Dog::~Dog( void )
