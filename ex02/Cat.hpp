@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/02 15:22:01 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/05/16 12:27:54 by ogregoir         ###   ########.fr       */
+/*   Created: 2024/05/02 15:22:31 by ogregoir          #+#    #+#             */
+/*   Updated: 2024/05/04 19:23:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-# define DOG_H
+#ifndef CAT_H
+# define CAT_H
 
 # include <string>
 # include <iostream>
 # include "Animal.hpp"
 # include "Brain.hpp"
 
-class Dog : public Animal
+class Cat : public Animal
 {
     private :
-        Brain* idea;
+        Brain*  idea;
     public :
-        Dog( void );
-        Dog& operator=(const Dog &copy);
-        Dog(const Dog &copy);
+        Cat( void );
+        Cat& operator=(const Cat &copy);
+        Cat(const Cat &copy);
         void makeSound() const;
-        ~Dog( void );
+        ~Cat( void );
+    
 };
 
 #endif
-

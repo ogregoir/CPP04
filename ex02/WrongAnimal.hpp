@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/04 19:07:00 by marvin            #+#    #+#             */
-/*   Updated: 2024/05/04 19:07:00 by marvin           ###   ########.fr       */
+/*   Created: 2024/05/04 16:49:16 by marvin            #+#    #+#             */
+/*   Updated: 2024/05/04 16:49:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_H
-# define BRAIN_H
+#ifndef WRONGANIMAL_H
+# define WRONGANIMAL_H
 
+# include <string>
 # include <iostream>
-# include <vector>
 
-class   Brain {
-    private :
-    
+class   WrongAnimal {
+    protected :
+        std::string type;
+
     public :
-        Brain();
-        Brain(const Brain &copy);
-        void operator=(const Brain &copy);
-        ~Brain();
-        std::vector<std::string> ideas;
+        WrongAnimal();
+        WrongAnimal(const WrongAnimal &copy);
+        WrongAnimal operator=(const WrongAnimal &copy);
+        std::string getType() const;
+        virtual ~WrongAnimal();
+        virtual void makeSound() const;
 };
 
 #endif
