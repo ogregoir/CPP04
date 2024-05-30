@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 15:22:23 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/05/03 17:25:36 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/05/04 18:55:33 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Cat::Cat(const Cat &copy) : Animal(copy)
 
 Cat::~Cat( void )
 {
+	//Animal::~Animal();
 	std::cout << "Cat destructor called" << std::endl;
 }
 

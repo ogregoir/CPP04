@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ogregoir <ogregoir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 15:22:14 by ogregoir          #+#    #+#             */
-/*   Updated: 2024/05/03 17:20:26 by ogregoir         ###   ########.fr       */
+/*   Updated: 2024/05/04 18:55:43 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog  ( void )
+Dog::Dog  ( void ) : Animal()
 {
     std::cout << "Dog constructor called" << std::endl;
 	this->type = "Dog";
@@ -24,7 +24,7 @@ Dog& Dog::operator=(const Dog &copy)
 	return(*this);
 }
 
-Dog::Dog(const Dog &copy)
+Dog::Dog(const Dog &copy) : Animal(copy)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 	*this = copy;
